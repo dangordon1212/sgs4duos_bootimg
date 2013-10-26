@@ -1,0 +1,28 @@
+ui_print("");
+ui_print("");
+ui_print(" ###################### ");
+ui_print("    Cyaniris' Kernel    ");
+ui_print("      For GT-I9502      ");
+ui_print(" ###################### ");
+ui_print("");
+ui_print("");
+show_progress(1.000000, 0);
+
+ui_print("Flashing Recovery...");
+set_progress(0.100000);
+assert(package_extract_file("boot.img", "/tmp/boot.img"),
+       write_raw_image("/tmp/boot.img", "/dev/block/mmcblk0p9"),
+       delete("/tmp/boot.img"));
+
+set_progress(1.000000);
+ui_print("Done, reboot boot...");
+show_progress(1.000000, 0);
+
+ui_print("");
+ui_print(" ###################### ");
+ui_print("    Cyaniris' Kernel    ");
+ui_print("      For GT-I9502      ");
+ui_print(" ###################### ");
+
+ui_print("");
+ui_print("Brought to you by * Cyaniris *");

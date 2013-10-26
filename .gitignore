@@ -1,0 +1,6 @@
+new-*
+boot.img
+initrd.img
+bootimg.cfg
+ramdisk
+zImage
